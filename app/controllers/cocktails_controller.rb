@@ -25,9 +25,16 @@ class CocktailsController < ApplicationController
   end
 
   def update
+    if @cocktail.update(cocktail_params)
+      redirect_to @cocktail
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @cocktail.destroy
+    redirect_to cocktails_path
   end
 
   private
