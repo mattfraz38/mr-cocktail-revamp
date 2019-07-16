@@ -1,5 +1,7 @@
 <h1>Welcome to Mr. Cocktail</h1>
 
+<h3><%= link_to "All Cocktials", cocktails_path %></h3>
+
 <% @cocktails.sample(4).each do |c| %>
   <p><%= link_to c.name, cocktail_path(c) %></p>
 <% end %>
