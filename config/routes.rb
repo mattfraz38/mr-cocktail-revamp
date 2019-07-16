@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  resources :cocktails
+  resources :cocktails, only: [ :index, :show, :new, :edit, :create ] do
+    resources :doses, only: [ :new, :edit, :create, :destroy ]
+  end
 end
