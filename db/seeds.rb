@@ -20,4 +20,4 @@
   ]
 
 Cocktail.create!(cocktail_attributes)
-puts 'Cocktails added!'
+puts "#{Cocktail.count} cocktails added!"
