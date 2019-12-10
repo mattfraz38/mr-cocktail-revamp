@@ -1,5 +1,5 @@
 class Ingredient < ApplicationRecord
-  has_many :doses
-  has_many :cocktails, through: :doses
+  belongs_to :cocktail
+  # has_many :cocktails, through: :amounts
   validates :name, uniqueness: :true, presence: :true
 end
