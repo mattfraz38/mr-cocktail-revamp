@@ -16,7 +16,20 @@
     { name: 'Irish Coffee' },
     { name: 'Bamboo' },
     { name: 'Gin Gin Mule' },
-    { name: 'Long Island Ice Tea' }
+    { name: 'Long Island Ice Tea' },
+    { name: 'Vesper' },
+    { name: 'Caipirinha' },
+    { name: 'Tom Collins' },
+    { name: 'Painkiller' },
+    { name: 'Bees Knees' },
+    { name: 'Ramos Gin Fizz' },
+    { name: 'Bramble' },
+    { name: 'Vodka Martini' },
+    { name: 'Hanky Panky' },
+    { name: 'Jungle Bird' },
+    { name: 'White Lady' },
+    { name: 'Paloma' },
+    { name: 'Cosmopolitan' }
   ]
 
 Cocktail.create!(cocktail_attributes)
