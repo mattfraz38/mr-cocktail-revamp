@@ -17,7 +17,7 @@ class CreateCocktailsTest < ActionDispatch::IntegrationTest
     get new_cocktail_path
     assert_template 'cocktails/new'
     assert_no_difference 'Cocktail.count' do
-      post cocktails_path, params: { cocktail: { name: " " } }
+      post cocktails_path, params: { cocktail: { name: "" } }
     end
     assert_template 'cocktails/new'
   end
