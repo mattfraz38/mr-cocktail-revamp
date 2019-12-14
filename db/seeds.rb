@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
   puts 'Cleaning database...'
   Cocktail.destroy_all
+  Ingredient.destroy
 
   puts 'Creating cocktails...'
   cocktail_attributes = [
@@ -31,6 +32,30 @@
     { name: 'Paloma' },
     { name: 'Cosmopolitan' }
   ]
+
+  # puts 'Creating ingredients...'
+  # ingredient_attributes = [
+  #   { name: 'Vodka' },
+  #   { name: 'Prosecco' },
+  #   { name: 'Champagne' },
+  #   { name: 'Irish Whiskey' },
+  #   { name: 'Vermouth' },
+  #   { name: 'Gin' },
+  #   { name: 'Tequila' },
+  #   { name: 'Vesper' },
+  #   { name: 'Cachaca' },
+  #   { name: 'Tom Collins' },
+  #   { name: 'Pusser\’s Navy Rum' },
+  #   { name: 'Bees Knees' },
+  #   { name: 'Ramos Gin Fizz' },
+  #   { name: 'Bramble' },
+  #   { name: 'Vodka Martini' },
+  #   { name: 'Fernet-Branca' },
+  #   { name: 'Campari' },
+  #   { name: 'Cointreau' },
+  #   { name: 'Paloma' },
+  #   { name: 'Cosmopolitan' }
+  # ]
 
 Cocktail.create!(cocktail_attributes)
 puts "#{Cocktail.count} cocktails added!"
