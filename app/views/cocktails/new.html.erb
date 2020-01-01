@@ -1,4 +1,13 @@
 <h1>Add a Cocktail</h1>
 
+<% if @cocktail.errors.any? %>
+<h2>Error!!</h2>
+  <ul>
+    <% @cocktail.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= render 'form' %>
 <%= link_to "Cancel", cocktails_path %>
