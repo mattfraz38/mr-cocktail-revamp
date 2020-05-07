@@ -1,7 +1,7 @@
 <h1>Add a Cocktail</h1>
 
 <% if @cocktail.errors.any? %>
-<h2>Error!!</h2>
+  <h2>Error!!</h2>
   <ul>
     <% @cocktail.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>

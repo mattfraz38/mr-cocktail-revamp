@@ -4,7 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.3'
 
 # postgresql database
-gem 'pg'
+# gem 'pg'
+# gem 'pg', '~> 1.2', '>= 1.2.3'
 
 # integration testing
 gem 'rails-controller-testing'
@@ -68,5 +69,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
-  gem 'pg'
+  # gem 'pg'
+  gem 'pg', '~> 1.2', '>= 1.2.3'
 end
