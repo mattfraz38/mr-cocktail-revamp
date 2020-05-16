@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# puts 'Cleaning database...'
-# Cocktail.destroy_all
-# Ingredient.destroy_all
+puts 'Cleaning database...'
+Cocktail.destroy_all
+Ingredient.destroy_all
 #
 # puts 'Creating cocktails...'
 # cocktail_attributes = [
@@ -84,62 +84,62 @@
 #   end
 # end
 
-# puts 'Creating cocktails...'
-# cocktail_attributes = [
-#   { name: 'White Russian'],
-#   { name: 'Bellini' },
-#   { name: 'Champagne Cocktail' },
-#   { name: 'Irish Coffee' },
-#   { name: 'Bamboo' },
-#   { name: 'Gin Gin Mule' },
-#   { name: 'Long Island Ice Tea' },
-#   { name: 'Vesper' },
-#   { name: 'Caipirinha' },
-#   { name: 'Tom Collins' },
-#   { name: 'Painkiller' },
-#   { name: 'Bees Knees' },
-#   { name: 'Ramos Gin Fizz' },
-#   { name: 'Bramble' },
-#   { name: 'Vodka Martini' },
-#   { name: 'Hanky Panky' },
-#   { name: 'Jungle Bird' },
-#   { name: 'White Lady' },
-#   { name: 'Paloma' },
-#   { name: 'Cosmopolitan' }
-# ]
+puts 'Creating cocktails...'
+cocktail_attributes = [
+  { name: 'White Russian' },
+  { name: 'Bellini' },
+  { name: 'Champagne Cocktail' },
+  { name: 'Irish Coffee' },
+  { name: 'Bamboo' },
+  { name: 'Gin Gin Mule' },
+  { name: 'Long Island Ice Tea' },
+  { name: 'Vesper' },
+  { name: 'Caipirinha' },
+  { name: 'Tom Collins' },
+  { name: 'Painkiller' },
+  { name: 'Bees Knees' },
+  { name: 'Ramos Gin Fizz' },
+  { name: 'Bramble' },
+  { name: 'Vodka Martini' },
+  { name: 'Hanky Panky' },
+  { name: 'Jungle Bird' },
+  { name: 'White Lady' },
+  { name: 'Paloma' },
+  { name: 'Cosmopolitan' }
+]
 
-# puts 'Creating ingredients...'
-# ingredient_attributes = [
-#   { name: 'Vodka' },
-#   { name: 'Prosecco' },
-#   { name: 'Champagne' },
-#   { name: 'Irish Whiskey' },
-#   { name: 'Vermouth' },
-#   { name: 'Gin' },
-#   { name: 'Tequila' },
-#   { name: 'Vesper' },
-#   { name: 'Cachaca' },
-#   { name: 'Tom Collins' },
-#   { name: 'Pusser\’s Navy Rum' },
-#   { name: 'Bees Knees' },
-#   { name: 'Ramos Gin Fizz' },
-#   { name: 'Bramble' },
-#   { name: 'Vodka Martini' },
-#   { name: 'Fernet-Branca' },
-#   { name: 'Campari' },
-#   { name: 'Cointreau' },
-#   { name: 'Paloma' },
-#   { name: 'Cosmopolitan' }
-# ]
+puts 'Creating ingredients...'
+ingredient_attributes = [
+  { name: 'Vodka' },
+  { name: 'Prosecco' },
+  { name: 'Champagne' },
+  { name: 'Irish Whiskey' },
+  { name: 'Vermouth' },
+  { name: 'Gin' },
+  { name: 'Tequila' },
+  { name: 'Vesper' },
+  { name: 'Cachaca' },
+  { name: 'Tom Collins' },
+  { name: 'Pusser’s Navy Rum' },
+  { name: 'Bees Knees' },
+  { name: 'Ramos Gin Fizz' },
+  { name: 'Bramble' },
+  { name: 'Vodka Martini' },
+  { name: 'Fernet-Branca' },
+  { name: 'Campari' },
+  { name: 'Cointreau' },
+  { name: 'Paloma' },
+  { name: 'Cosmopolitan' }
+]
 
-# Cocktail.create!(cocktail_attributes)
-# puts "#{Cocktail.count} cocktails added!"
+Cocktail.create!(cocktail_attributes)
+puts "#{Cocktail.count} cocktails added!"
 #
 # cocktail = Cocktail.first
 # cocktail.ingredients.create!(name: "Vodka")
 
-# Ingredient.create!(ingredient_attributes)
-# puts "#{Ingredient.count} ingredients added!"
+Ingredient.create!(ingredient_attributes)
+puts "#{Ingredient.count} ingredients added!"
 
 # Capturing each cocktail hash value into a single array
 # cocktail_attripute_values = []

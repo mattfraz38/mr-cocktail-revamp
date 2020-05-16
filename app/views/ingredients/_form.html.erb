@@ -1,4 +1,5 @@
-<%= form_for @ingredient do |f| %>
-  <%= f.text_field :name %>
-  <%= f.submit %>
+<%= simple_form_for @ingredient do |f| %>
+  <%= f.label 'Name' %>
+  <%= f.input_field :name %>
+  <%= f.submit 'Add Ingredient' %>
 <% end %>

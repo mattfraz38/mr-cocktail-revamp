@@ -3,10 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
 
-# postgresql database
-# gem 'pg'
-# gem 'pg', '~> 1.2', '>= 1.2.3'
-
+gem 'simple_form', '~> 5.0', '>= 5.0.2'
 # integration testing
 gem 'rails-controller-testing'
 
@@ -43,7 +40,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.4', '>= 1.4.2'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -69,6 +66,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
-  # gem 'pg'
   gem 'pg', '~> 1.2', '>= 1.2.3'
 end

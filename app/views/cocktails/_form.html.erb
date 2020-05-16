@@ -1,4 +1,6 @@
-<%= form_for @cocktail do |f| %>
-  <%= f.text_field :name %>
-  <%= f.submit %>
+<%= simple_form_for @cocktail do |f| %>
+  <%= f.label 'Name' %>
+  <%= f.input_field :name %>
+  <%# <%= f.association :ingredients, as: :collection_select %> %>
+  <%= f.submit 'Add Cocktail' %>
 <% end %>

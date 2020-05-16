@@ -5,9 +5,6 @@ class IngredientsController < ApplicationController
     @ingredients = Ingredient.all
   end
 
-  def show
-  end
-
   def new
     @ingredient = Ingredient.new
   end
@@ -25,6 +22,11 @@ class IngredientsController < ApplicationController
   end
 
   def update
+    if @ingredient.update(ingredient_params)
+      redirect_to ingredient_path(@ingredient)
+    else
+      render 'edit'
+    end
   end
 
   def destroy
