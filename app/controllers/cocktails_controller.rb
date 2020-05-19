@@ -17,6 +17,8 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
+    # @ingredient = @cocktail.ingredients.create(params[:ingredient]).permit(:name, :ingredient_id)
+    # @cocktail.ingredients = Ingredient.find(params[:ingredient])
     if @cocktail.save
       flash[:notice] = "#{@cocktail.name} was added!"
       redirect_to @cocktail
@@ -45,6 +47,6 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, ingredient_ids: [])
   end
 end

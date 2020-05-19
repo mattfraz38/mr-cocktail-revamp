@@ -1,6 +1,8 @@
 <%= simple_form_for @cocktail do |f| %>
   <%= f.label 'Name' %>
   <%= f.input_field :name %>
-  <%# <%= f.association :ingredients, as: :collection_select %> %>
+  <%#= f.association :ingredients, as: :collection_select %>
+  <%#= f.collection_check_boxes :role_ids, Role.all, :id, :name %>
+  <%= f.association :ingredients, as: :select %>
   <%= f.submit 'Add Cocktail' %>
 <% end %>

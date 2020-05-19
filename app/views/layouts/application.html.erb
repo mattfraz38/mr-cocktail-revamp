@@ -16,6 +16,13 @@
         <li><%= msg %></li>
       </ul>
     <% end %>
+
+    <p>
+      <%= link_to 'Cocktails', cocktails_path %> ||
+      <%= link_to 'Ingredients', ingredients_path %>
+    </p>
+
     <%= yield %>
+
   </body>
 </html>

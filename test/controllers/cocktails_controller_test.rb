@@ -16,6 +16,13 @@ class CocktailsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should create new cocktail" do
+    assert_difference('Cocktail.count', 1) do
+      post cocktails_url, params: { cocktail: { name: "screwdriver" } }
+    end
+    assert_redirected_to cocktail_url(Cocktail.last)
+  end
+
   test "should get cocktails show" do
     get cocktail_path(@cocktail)
     assert_response :success
